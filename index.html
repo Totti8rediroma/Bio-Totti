@@ -1,0 +1,150 @@
+<head>
+    <style>
+        .introduzione {
+            background-color: rgb(181, 204, 69);
+            padding: 2px;
+        }
+        .lista {
+            border: 1px solid black;   
+        }
+        .musica {
+            background-color: rgb(218, 80, 80);
+        }
+        .mappa {
+            background-color: rgb(70, 137, 196);
+        }
+        .pulsante {
+            border: 1px solid black;   
+            padding:5px;
+            margin-top: 15px;
+        }
+        .titoletto {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .scorre {
+          animation: cambioColori 3s infinite alternate;
+        }
+
+        @keyframes cambioColori {
+            0%{color: black;}
+            25%{color: blue;}
+            50%{color: green;}
+            75%{color: purple;}
+            100%{color:black;}
+        }
+
+   .riferimenti {
+   background-color: blueviolet; 
+       display: flex;
+       justify-content: space-evenly;
+       padding: 20px;
+   }
+
+        footer {
+            margin-top:40px;
+        }
+
+        #mappa {
+            display: none;
+        }
+      
+        #video {
+            display: none;
+        }
+
+        .descrizione {
+            background-color:  rgb(181, 204, 69);
+        }
+
+        .bio {
+            padding: 10px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="introduzione">
+        <h1>Francesco Totti</h1>
+        <h3>Ex calciatore/Ottavo re di roma</h3>
+        <marquee class="scorre">vendo una macchina nazista del fine guerra 10 ceffoni</marquee>
+    </header>
+    <main>
+        <ul class="lista">
+            <b>Anagrafica</b>
+            <li>Data di nascita: 27 Settembre 1976</li>
+            <li>Luogo di nascita: Roma</li>
+            <li>Residenza: Roma</li>
+            <li>Altezza: 1.80 </li>
+            <li>Lavoro: Ottavo re di Roma fozza Roma </li>
+        </ul>
+        <div class="descrizione">
+            <h5 class="titoletto"> Bio <i class="fa fa-thumbs-up"></i></h5>
+            <p class="bio">
+                Francesco Totti (Roma, 27 settembre 1976) è un ex calciatore italiano, di ruolo attaccante o centrocampista, campione del mondo nel 2006 e vicecampione d'Europa nel 2000 con la nazionale italiana. I due numeri indicano le presenze e le reti segnate, per le sole partite di campionato.
+
+            </p>
+        </div>
+        <div class="musica">
+            <h5 id="musica" class="titoletto" onclick="appari()" >Musica <i class="fa fa-music"></i></h5>
+            <div id="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bdBrDcGIvdI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="mappa">
+            <h5 class="titoletto" onclick="appariMappa()">Luogo di lavoro <i class="fa fa-map-marker"></i></h5>
+            <div id="mappa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d100967.13806823267!2d55.216350438828!3d25.157885602585953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sit!4v1674563482627!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- <span>
+            <a class="pulsante" href="mailto:e-mail@mail.it">Contattami</a>
+        </span> -->
+        <div class="riferimenti">
+            <a href="www.google.it">
+            <i class="fa fa-instagram"></i>
+            <a href="https://th.bing.com/th/id/OIP.RdzthOonY6enkXOZQ3xGQQHaIS?pid=ImgDet&rs=1">
+            <i class="fa fa-facebook"></i>
+            <a href="www.google.it">
+            <i class="fa fa-envelope-o"></i>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        console.log("funziono");
+
+        var b = 0; 
+
+        function appariMappa() {
+            if (b == 0) {
+                document.getElementById("mappa").style.display = "initial";
+                b = 1;
+            }
+            else if (b ==1) {
+                document.getElementById("mappa").style.display = "none";
+                b = 0;
+            }
+        }
+
+        var a = 0; 
+
+        function appari() {
+            if (a == 0) {
+                document.getElementById("video").style.display = "none";
+                a = 1;
+            }
+            else if (a == 1) {
+                document.getElementById("video").style.display = "initial";
+                a = 0; 
+            } 
+        }
+       
+    </script>
+</body>
+
